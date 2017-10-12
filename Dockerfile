@@ -1,5 +1,4 @@
-FROM alpine:3.5
-RUN apk add --no-cache git openssh tar python python3 && \
-    pip3 install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir tox
+FROM alpine:3.6
+RUN apk add --no-cache python2 py2-pip python3 && \
+	pip install --upgrade pip tox
 CMD ["/bin/sh"]
